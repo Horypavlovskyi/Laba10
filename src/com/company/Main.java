@@ -59,11 +59,11 @@ public class Main {
         Library library = new Library("КиноПоиск");
 //        System.out.println(library.returnArray());
 //        System.out.println(library.addFilm());
-        System.out.println(library.implementCheck("Wolf"));
-        System.out.println(library.implementCheck("Factor"));
-        System.out.println(library.implementCheck("Rain"));
-        System.out.println(library.implementCheck("Mag"));
-
+        System.out.println(library.implementCheck(film1));
+        System.out.println(library.implementCheck(film2));
+        System.out.println(library.implementCheck(film3));
+        Film film4 = new Film("XXX", "00:50", Film.HORROR);
+        System.out.println(library.implementCheck(film4));
 
 //        static {
 //            System.out.println("«Создается новый Фильм»");

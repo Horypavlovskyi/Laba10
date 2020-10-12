@@ -7,14 +7,14 @@ public class Library {
     public static void main(String[] args) {
 
     }
-    private String[] films;
+    private Film[] films;
     private String libraryName;
     public static final String CONSTANTA = "Name";
 
     {
-        this.films = new String[5];
-        films[0] = "Терминатор 2: Судный день";
-        films[1] = "Маска";
+        this.films = new Film[5];
+        films[0] = new Film("Терминатор 2: Судный день", "01:20",Film.FANTASY);
+        films[1] = new Film("Маска", "01:35", Film.COMEDY);
 
         System.out.println("Добавлены любимые фильмы");
     }
@@ -36,12 +36,12 @@ public class Library {
      * @param film add new film
      * @return "Вы достигли лимита" or "your film was added to cell with index: and index method returnArray"
      */
-    public String implementCheck(String film) {
+    public String implementCheck(Film film) {
         int indexOfArray = returnArray();
         if (indexOfArray == -1) {
             return "Вы достигли лимита";
         } else {
-            films[indexOfArray] = film;
+            films [indexOfArray] = film;
             return "your film was added to cell with index: " + indexOfArray;
         }
 
@@ -52,9 +52,6 @@ public class Library {
         System.out.println("Библиотека " + libraryName + " успешно создана.");
     }
 
-    public String[] getFilms() {
-        return films;
-    }
 
     public static String getCONSTANTA() {
         return CONSTANTA;

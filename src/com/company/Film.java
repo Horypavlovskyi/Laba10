@@ -7,6 +7,7 @@ public class Film {
     private String name;
     private String duration;
     private String genre;
+    private Film[] films;
     public static final String COMEDY = "COMEDY";
     public static final String FANTASY = "FANTASY";
     public static final String HORROR = "HORROR";
